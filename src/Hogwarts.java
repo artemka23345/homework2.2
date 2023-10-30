@@ -50,6 +50,8 @@ public class Hogwarts {
             System.out.println("По мощности магии оба студента равны");
         }
     }
-    public void equalsFaculty(Hogwarts h) {
+    public void equalsFaculty(Hogwarts g) {
     }
+
 }
+

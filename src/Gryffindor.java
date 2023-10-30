@@ -40,8 +40,21 @@ public class Gryffindor extends  Hogwarts{
        super.description();
         System.out.println("Благородство: " + getNobility() + ", " + "Честь: " + getHonor() + ", " + "Храбрость: " + getCourage());
     }
-    @Override
-    public void equalsFaculty(Hogwarts h) {//TODO
+@Override
+    public void equalsFaculty(Hogwarts h) {
+        Gryffindor g = (Gryffindor) h;
+        int firstStudent = getNobility() + getHonor() + getCourage();
+        int secondStudent = g.getNobility() + g.getHonor() + g.getCourage();
+        String msg = "%s  лучший Гриффиндорец, чем  %s\n";
+        if (firstStudent > secondStudent) {
+            System.out.printf(msg,getName(),g.getName());
+        } else if (firstStudent < secondStudent) {
+            System.out.printf(msg,g.getName(),getName());
+        }else {
+            System.out.println("Студенты равны");
+        }
+    }
     }
 
-}
+
+

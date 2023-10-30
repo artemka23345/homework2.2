@@ -11,7 +11,10 @@ public class Hufflepuff extends  Hogwarts{
         this.honor = honor;
     }
     @Override
-    public void description(){
+    public void description(){}
+
+    @Override
+    public void equalsFaculty(Hogwarts h) {
 
     }
 }

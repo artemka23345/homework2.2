@@ -15,17 +15,21 @@ public class Main {
      * сравнительную оценку между двумя учениками.
      */
     public static void main(String[] args) {
-        Hogwarts gryffindor = new Gryffindor("Гарри Поттер",3,1,3,6,7);
+        Hogwarts gryffindor = new Gryffindor("Гарри Поттер",3,1,3,5,7);
         Hogwarts gryffindor2 = new Gryffindor("Гермиона Грейнджер",4,3,6,8,4);
         Hogwarts gryffindor3 = new Gryffindor("Рон Уизли",4,2,2,9,8);
 
-        Hogwarts slytherin = new Slytherin("Драко Малфой",2,4,2,4,5,6,3);
-        Hogwarts slytherin2 = new Slytherin("Грэхэм Монтегю",2,6,2,7,10,2,2);
-        Hogwarts slytherin3 = new Slytherin("Грегори Гойл",6,2,4,4,6,1,8);
+        Slytherin slytherin = new Slytherin("Драко Малфой",2,4,2,4,5,6,3);
+        Slytherin slytherin2 = new Slytherin("Грэхэм Монтегю",2,6,2,7,10,2,2);
+        Slytherin slytherin3 = new Slytherin("Грегори Гойл",6,2,4,4,6,1,8);
 
-        gryffindor.description();
+        System.out.println("_______________________________");
+        gryffindor3.description();
         gryffindor.equalsHogwarts(gryffindor2);
-        slytherin.description();
+        gryffindor.equalsFaculty(gryffindor2);
 
+        System.out.println("_______________________________");
+        slytherin3.description();
+        slytherin.equalsHogwarts(slytherin2);
     }
 }

@@ -14,4 +14,8 @@ public class Ravenclaw extends  Hogwarts{
     public void description(){
 
     }
+    @Override
+    public void equalsFaculty(Hogwarts h) {
+
+    }
 }

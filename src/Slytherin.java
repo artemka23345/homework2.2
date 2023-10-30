@@ -63,4 +63,9 @@ public class Slytherin extends  Hogwarts {
                 " " + "Жажда власти: " + getThirstForPower());
 
     }
+    @Override
+    public void equalsFaculty(Hogwarts h) {
+        Slytherin s = (Slytherin) h;
+
+    }
 }
