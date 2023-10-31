@@ -19,9 +19,17 @@ public class Main {
         Hogwarts gryffindor2 = new Gryffindor("Гермиона Грейнджер",4,3,6,8,4);
         Hogwarts gryffindor3 = new Gryffindor("Рон Уизли",4,2,2,9,8);
 
-        Slytherin slytherin = new Slytherin("Драко Малфой",2,4,2,4,5,6,3);
-        Slytherin slytherin2 = new Slytherin("Грэхэм Монтегю",2,6,2,7,10,2,2);
-        Slytherin slytherin3 = new Slytherin("Грегори Гойл",6,2,4,4,6,1,8);
+        Hogwarts slytherin = new Slytherin("Драко Малфой",2,4,2,4,50,6,3);
+        Hogwarts slytherin2 = new Slytherin("Грэхэм Монтегю",2,6,2,7,10,2,2);
+        Hogwarts slytherin3 = new Slytherin("Грегори Гойл",6,2,4,4,6,1,8);
+
+        Hogwarts hufflepuff = new Hufflepuff("Захария Смит",7,4,12,3,6);
+        Hogwarts hufflepuff2 = new Hufflepuff("Седрик Диггори",3,5,20,7,10);
+        Hogwarts hufflepuff3 = new Hufflepuff("Джастин Финч-Флетчли",6,2,7,4,6);
+
+        Hogwarts ravenclaw = new Ravenclaw("Чжоу Чанг",6,7,1,4,5);
+        Hogwarts ravenclaw2 = new Ravenclaw("Падма Патил",2,3,2,8,1);
+        Hogwarts ravenclaw3 = new Ravenclaw("Маркус Белби",3,2,1,4,3);
 
         System.out.println("_______________________________");
         gryffindor3.description();
@@ -31,5 +39,17 @@ public class Main {
         System.out.println("_______________________________");
         slytherin3.description();
         slytherin.equalsHogwarts(slytherin2);
+        slytherin.equalsFaculty(slytherin2);
+
+        System.out.println("_______________________________");
+        hufflepuff3.description();
+        hufflepuff.equalsHogwarts(hufflepuff2);
+        hufflepuff.equalsFaculty(hufflepuff2);
+
+        System.out.println("_______________________________");
+        ravenclaw3.description();
+        ravenclaw.equalsHogwarts(ravenclaw2);
+        ravenclaw.equalsFaculty(ravenclaw2);
+
     }
 }

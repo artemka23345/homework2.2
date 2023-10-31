@@ -39,9 +39,9 @@ public class Hogwarts {
     }
 
     public void equalsHogwarts(Hogwarts h) {
-        int firstStudent = this.getPowerOfMagic() + this.getTransgressionDistance();;
+        int firstStudent = getPowerOfMagic() + getTransgressionDistance();;
         int secondStudent = h.getPowerOfMagic() + h.getTransgressionDistance();;
-        String msg = "%s обладает бОльшей мощностью магии, чем %s\n";
+        String msg = "%s, обладает бОльшей мощностью магии, чем %s\n";
         if (firstStudent > secondStudent) {
             System.out.printf(msg,getName(),h.getName());
         } else if (firstStudent < secondStudent) {
@@ -50,8 +50,10 @@ public class Hogwarts {
             System.out.println("По мощности магии оба студента равны");
         }
     }
-    public void equalsFaculty(Hogwarts g) {
+    public void equalsFaculty(Hogwarts h) {
+
     }
+
 
 }
 

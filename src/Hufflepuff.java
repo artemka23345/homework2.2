@@ -10,11 +10,51 @@ public class Hufflepuff extends  Hogwarts{
         this.loyal = loyal;
         this.honor = honor;
     }
+
+    public int getHardworking() {
+        return hardworking;
+    }
+
+    public void setHardworking(int hardworking) {
+        this.hardworking = hardworking;
+    }
+
+    public int getLoyal() {
+        return loyal;
+    }
+
+    public void setLoyal(int loyal) {
+        this.loyal = loyal;
+    }
+
+    public int getHonor() {
+        return honor;
+    }
+
+    public void setHonor(int honor) {
+        this.honor = honor;
+    }
+
     @Override
-    public void description(){}
+    public void description(){
+        super.description();
+        System.out.println("Трудолюбие: " + getHardworking() + ", " + "Лояльность: " + getLoyal() + ", " + "Честь: " + getHonor());
+    }
 
     @Override
     public void equalsFaculty(Hogwarts h) {
+        Hufflepuff g = (Hufflepuff) h;
+        int firstStudent = getHardworking() + getLoyal() + getHonor();
+        int secondStudent = g.getHardworking() + g.getLoyal() + g.getHonor();
+        String msg = "%s  лучший Пуффендуец, чем  %s\n";
+        if (firstStudent > secondStudent) {
+            System.out.printf(msg, getName(), g.getName());
+        } else if (firstStudent < secondStudent) {
+            System.out.printf(msg, g.getName(), getName());
+        } else {
+            System.out.println("Студенты равны");
+        }
+    }
 
     }
-}
+
