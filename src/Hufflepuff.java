@@ -1,11 +1,11 @@
-public class Hufflepuff extends  Hogwarts{
+public class Hufflepuff extends Hogwarts {
     int hardworking;
     int loyal;
     int honor;
 
 
-    public Hufflepuff(String name,int powerOfMagic, int transgressionDistance,  int hardworking, int loyal, int honor) {
-        super(name,powerOfMagic, transgressionDistance);
+    public Hufflepuff(String name, int powerOfMagic, int transgressionDistance, int hardworking, int loyal, int honor) {
+        super(name, powerOfMagic, transgressionDistance);
         this.hardworking = hardworking;
         this.loyal = loyal;
         this.honor = honor;
@@ -36,25 +36,28 @@ public class Hufflepuff extends  Hogwarts{
     }
 
     @Override
-    public void description(){
+    public void description() {
         super.description();
         System.out.println("Трудолюбие: " + getHardworking() + ", " + "Лояльность: " + getLoyal() + ", " + "Честь: " + getHonor());
     }
 
     @Override
     public void equalsFaculty(Hogwarts h) {
-        Hufflepuff g = (Hufflepuff) h;
-        int firstStudent = getHardworking() + getLoyal() + getHonor();
-        int secondStudent = g.getHardworking() + g.getLoyal() + g.getHonor();
-        String msg = "%s  лучший Пуффендуец, чем  %s\n";
-        if (firstStudent > secondStudent) {
-            System.out.printf(msg, getName(), g.getName());
-        } else if (firstStudent < secondStudent) {
-            System.out.printf(msg, g.getName(), getName());
+        if (h instanceof Hufflepuff) {
+            Hufflepuff g = (Hufflepuff) h;
+            int firstStudent = getHardworking() + getLoyal() + getHonor();
+            int secondStudent = g.getHardworking() + g.getLoyal() + g.getHonor();
+            String msg = "%s  лучший Пуффендуец, чем  %s\n";
+            if (firstStudent > secondStudent) {
+                System.out.printf(msg, getName(), g.getName());
+            } else if (firstStudent < secondStudent) {
+                System.out.printf(msg, g.getName(), getName());
+            } else {
+                System.out.println("Студенты равны");
+            }
         } else {
-            System.out.println("Студенты равны");
+            System.out.println("Не верный тип данных");
         }
     }
-
-    }
+}
 

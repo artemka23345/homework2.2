@@ -65,7 +65,22 @@ public class Slytherin extends  Hogwarts {
     }
     @Override
     public void equalsFaculty(Hogwarts h) {
-        Slytherin s = (Slytherin) h;
+        if (h instanceof Ravenclaw) {
+            Slytherin s = (Slytherin) h;
+            int firstStudent = getCunning() + getDetermination() + getAmbition() + getResourcefulness() + getThirstForPower();
+            int secondStudent = s.getCunning() + s.getDetermination() + s.getAmbition() + s.getResourcefulness() + s.getThirstForPower();
+            String msg = "%s  лучший Слицеринец, чем  %s\n";
+            if (firstStudent > secondStudent) {
+                System.out.printf(msg, getName(), s.getName());
+            } else if (firstStudent < secondStudent) {
+                System.out.printf(msg, s.getName(), getName());
+            } else {
+                System.out.println("Студенты равны");
+            }
+        }else {
+            System.out.println("Не верный тип данных");
+        }
+    }
 
     }
-}
+

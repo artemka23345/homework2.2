@@ -50,6 +50,5 @@ public class Main {
         ravenclaw3.description();
         ravenclaw.equalsHogwarts(ravenclaw2);
         ravenclaw.equalsFaculty(ravenclaw2);
-
     }
 }

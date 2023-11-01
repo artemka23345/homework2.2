@@ -53,7 +53,5 @@ public class Hogwarts {
     public void equalsFaculty(Hogwarts h) {
 
     }
-
-
 }
 

@@ -42,16 +42,20 @@ public class Ravenclaw extends  Hogwarts{
     }
     @Override
     public void equalsFaculty(Hogwarts h) {
-        Ravenclaw r = (Ravenclaw) h;
-        int firstStudent = getSmart() + getWise() + getCreativity();
-        int secondStudent = r.getSmart() + r.getWise() + r.getCreativity();
-        String msg = "%s  лучший Когтевранец, чем  %s\n";
-        if (firstStudent > secondStudent) {
-            System.out.printf(msg, getName(), r.getName());
-        } else if (firstStudent < secondStudent) {
-            System.out.printf(msg, r.getName(), getName());
-        } else {
-            System.out.println("Студенты равны");
+        if (h instanceof Ravenclaw) {
+            Ravenclaw r = (Ravenclaw) h;
+            int firstStudent = getSmart() + getWise() + getCreativity();
+            int secondStudent = r.getSmart() + r.getWise() + r.getCreativity();
+            String msg = "%s  лучший Когтевранец, чем  %s\n";
+            if (firstStudent > secondStudent) {
+                System.out.printf(msg, getName(), r.getName());
+            } else if (firstStudent < secondStudent) {
+                System.out.printf(msg, r.getName(), getName());
+            } else {
+                System.out.println("Студенты равны");
+            }
+        }else {
+            System.out.println("Не верный тип данных");
         }
     }
 }
