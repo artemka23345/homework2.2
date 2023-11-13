@@ -1,4 +1,4 @@
-public class Hogwarts {
+public abstract class Hogwarts {
     private int powerOfMagic;
     private int transgressionDistance;
     private String name;
@@ -50,8 +50,6 @@ public class Hogwarts {
             System.out.println("По мощности магии оба студента равны");
         }
     }
-    public void equalsFaculty(Hogwarts h) {
-
-    }
+    public abstract void equalsFaculty(Hogwarts h);
 }
 

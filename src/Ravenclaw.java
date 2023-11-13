@@ -1,7 +1,7 @@
 public class Ravenclaw extends  Hogwarts{
-    int smart;
-    int wise;
-    int creativity;
+    private int smart;
+    private int wise;
+    private int creativity;
 
 
     public Ravenclaw(String name,int powerOfMagic, int transgressionDistance, int smart, int wise, int creativity) {
